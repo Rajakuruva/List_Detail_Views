@@ -1,0 +1,18 @@
+{% extends 'app/Dummy.html' %}
+
+{% block title %}
+<title>School Details Page</title>
+{% endblock %}
+
+{% block body_block %}
+    <h1>Details list of sclobj</h1>
+    <h1>Name of School is {{sclobj.name}}</h1>
+    <h1>Prinicipal of school is {{sclobj.Prinicipal}}</h1>
+    <h1>Location of school is {{sclobj.Location}}</h1>
+
+    {% for a in sclobj.schools.all %}
+        <h5>Name of student is {{a.Sname}}</h5>
+        <h5>Age of student is {{a.Sage}}</h5>
+    {% endfor %}
+    
+{% endblock %}

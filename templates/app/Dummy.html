@@ -1,0 +1,23 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% block title %}
+    <title>Dummy</title>
+    {% endblock %}
+    <link rel="stylesheet" href="{% static 'css/mdb.min.css' %}">
+    <script src="{% static 'js/mdb.min.js' %}"></script>
+</head>
+
+<body>
+    <center>
+        <nav class="nav bg-secondary">
+            <a href="{% url 'admin:index' %}" class="nav-link text-white mt-2">Admin_Page</a>
+            <a href="{% url 'Home' %}" class="nav-link text-white mt-2">Home_page</a>
+            <a href="{% url 'School_list' %}" class="nav-link text-white mt-2">School_list</a>
+        </nav>
+        {% block body_block %}
+        {% endblock %}
+    </center>
+</body
+</html>
