@@ -1,0 +1,30 @@
+{% extends 'app/Dummy.html' %}
+
+{% block title %}
+<title>Schoolcreate_page</title>
+<style>
+    form
+    {
+        border-radius: 20px;
+    }
+</style>
+{% endblock %}
+
+{% block body_block %}
+<h1>Schoolcreate PAGE</h1>
+<form method="POST" class="bg-info w-25 text-white">
+    {% csrf_token %}
+    <br>
+    {{form.name.label}}
+    {{form.name}}
+    <br><br>
+    {{form.Prinicipal.label}}
+    {{form.Prinicipal}}
+    <br><br>
+    {{form.Location.label}}
+    {{form.Location}}
+    <br><br>
+    <input type="submit" value="Create" class="btn btn-warning">
+    <br><br>
+</form>
+{% endblock %}
